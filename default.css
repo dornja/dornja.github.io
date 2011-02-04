@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    background-color: #4573d5;
+}
+
+tt {
+font-family:Consolas,'Lucida Console','Bitstream VeraSans Mono','DejaVu Sans Mono',monospace;
+}
+
+<!--
+Font family recommendations from http://kv5r.com/articles/dev/font-family.asp
+-->
+
+.serif {
+    font-family:Cambria,'Palatino Linotype','Book Antiqua','URW Palladio L',serif;
+}
+
+.sans {
+    font-family:Verdana,Geneva,'Bitstream Vera Sans','DejaVu Sans',sans-serif;
+}
+
