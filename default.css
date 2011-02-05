@@ -1,15 +1,29 @@
 body {
     margin: 0;
     padding: 0;
-
+    text-align: justify;
 }
 
 h1 {
-    background-color: #4573d5;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #6899d3;
 }
 
-tt {
-font-family:Consolas,'Lucida Console','Bitstream VeraSans Mono','DejaVu Sans Mono',monospace;
+h2 {
+    border-bottom: 1px solid #04346c;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+}
+
+#content-pane {
+    position: absolute;
+    left:  10%;
+    top:    0%;
+    width: 80%;
 }
 
 <!--
@@ -22,5 +36,9 @@ Font family recommendations from http://kv5r.com/articles/dev/font-family.asp
 
 .sans {
     font-family:Verdana,Geneva,'Bitstream Vera Sans','DejaVu Sans',sans-serif;
+}
+
+tt {
+font-family:Consolas,'Lucida Console','Bitstream VeraSans Mono','DejaVu Sans Mono',monospace;
 }
 
