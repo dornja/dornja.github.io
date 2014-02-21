@@ -6,17 +6,36 @@ body {
 
 h1 {
     margin: 0;
-    padding: 5px 0;
-    background-color: #6899d3;
+    color: white;
+    background-color: #5576cd;
 }
 
 h2 {
     border-bottom: 1px solid #04346c;
 }
 
+#headshot {
+    max-width: 50%;
+    width: 5in;
+    height: auto;
+}
+
 table {
     margin: 0;
     padding: 0;
+}
+
+td {
+    vertical-align: top;
+    padding-right: 1em;
+}
+
+td:last-child {
+    padding-right: 0;
+}
+
+.publications td {
+    padding-bottom: 1em;
 }
 
 #content-pane {
