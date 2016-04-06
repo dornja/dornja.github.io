@@ -20,6 +20,10 @@ h2 {
     height: auto;
 }
 
+figcaption {
+    text-align: center;
+}
+
 table {
     margin: 0;
     padding: 0;
@@ -32,6 +36,10 @@ td {
 
 td:last-child {
     padding-right: 0;
+}
+
+td.num {
+    text-align: right;
 }
 
 .publications td {
