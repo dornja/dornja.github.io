@@ -40,11 +40,10 @@
         text-align: right;
         vertical-align: top;
         padding-right: 1em;
-        font-weight: bold;
       }
   </style>
   </head>
-  <body id="home">
+  <body id="home" style="margin-bottom: 30px">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -64,6 +63,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="cv.pdf">CV</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#research">Research</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#teaching">Teaching</a></li>
             <li><a href="#academics">Academics</a></li>
@@ -74,7 +74,7 @@
 
     <div class="jumbotron">
       <div class="container">
-        <div class="row">
+        <div class="row" style="margin-bottom: 30px">
           <div class="col-md-7">
             <img class="img-responsive" src="images/headshot.jpg" alt="Jonathan Dorn" />
           </div>
@@ -90,16 +90,20 @@
               </li>
             </ul>
           </div>
+        </div>
+        <div class="row">
           <div class="col-md-12">
       <p class="lead">
-I am a Ph.D. candidate in Computer Science at the
+I am a Ph.D. candidate (anticipated graduation in Spring 2017) in Computer Science at the
 <a href="http://www.virginia.edu">University of Virginia</a>, advised by
 <a href="http://www.cs.virginia.edu/~weimer/">Wes Weimer</a>.
-I research software acceptability and human factors in software engineering.
-I am interested in understanding how humans perceive and interact with programs,
-especially how tools can support or interfere with program comprehension. My
-interests also include program analysis and transformations to improve
-acceptability.
+My research is on non-functional properties and human factors in software
+engineering. I am interested in properties of both the static source code, such
+as readability and program understandability, and the dynamic run-time behavior
+of programs, including energy use and output quality. In particular, I
+investigate how humans perceive and interact with source code and apply program
+analyses, transformations, and search-based software engineering techniques to
+improve the acceptability of these properties.
 </p><p>
 My dissertation proposal, titled "Improving Program Acceptability Through Source
 Code Transformations," was approved in April 2016.
@@ -111,11 +115,92 @@ Code Transformations," was approved in April 2016.
       </div>
     </div>
 
+    <div id="research" class="page-header container">
+      <h1>Research Projects</h1>
+    </div>
     <div class="container">
-      <h1 id="publications">Publications</h1>
+      <h2>PowerGAUGE</h2>
+      <div class="row">
+      <div class="col-sm-2">
+        <img class="img-responsive" src="images/emon-circuit.jpg" />
+      </div>
+      <div class="col-md-10">
+        In this project, we use <strong>lightweight program
+        transformations</strong> and <strong>genetic search</strong> to reduce
+        the energy requirements of data center applications. We leverage
+        mutational robustness (small changes to programs often retain the
+        original program's functionality) along with insights from
+        profile-guided optimization to effectively transform the program to use
+        less energy. In our experiments, we reduce energy by 20% on average
+        while retaining the original functionality and by almost 30% with
+        human-acceptable levels of error.
+      </div>
+      </div>
+
+      <h2>Readability</h2>
+      <div class="row">
+      <div class="col-sm-2">
+        <img class="img-responsive" src="images/readability.png">
+      </div>
+      <div class="col-md-10">
+        Developers spend an order of magnitude more time reading and maintaining
+        code than writing new code. This project aims to understand what factors
+        control the <strong>readability</strong> of source code and investigates
+        automatic techniques to improve readability. In an IRB-approved human
+        study, users were able to answer questions 14% more quickly (with no
+        loss of accuracy) about automatically generated tests when they were
+        optimized for readability than when they were not.
+      </div>
+      </div>
+
+      <h2>Program Repair</h2>
+      <div class="row">
+      <div class="col-sm-2">
+        <img class="img-responsive" src="images/genprog-alg.png" />
+      </div>
+      <div class="col-md-10">
+        Existing approaches to automatic program repair require a specification
+        of the desired program behavior, either explicit (e.g., pre- and
+        post-conditions) or implicit (e.g., inferred from a test suite).
+        Although many bug reports include a failing test case that specifies the
+        desired missing behavior, many real-world programs lack sufficient
+        passing tests to describe the desired existing behavior. In this
+        project, we investigate the applicability of <strong>specification
+        mining</strong> and automatic <strong>test-case generation</strong>
+        techniques to capture existing behavior for use in program repair.
+      </div>
+      </div>
+
+      <h2>Shader Simplification</h2>
+      <div class="row">
+      <div class="col-sm-2">
+        <img class="img-responsive visible-md-block visible-lg-block" src="images/brick-sm.png" />
+        <img class="img-responsive hidden-md hidden-lg" src="images/brick-lg.png" />
+      </div>
+      <div class="col-md-10">
+        Many modern rendering systems use small programs called <em>shaders</em>
+        to specify the properties of elements of the scene being rendered. The
+        development of these shaders is complicated by <em>aliasing</em>
+        artifacts, when the features encoded in the shader change too rapidly
+        relative to the pixels of the image. In this project, we apply local
+        <strong>light-weight transformations</strong> and <strong>heuristic
+        search</strong> to existng shader programs to introduce the pixel size
+        as a parameter. We find that our approach produces images with similar
+        quality to state-of-the-art computationally intensive approaches, but
+        with significantly lower runtime.
+      </div>
+      </div>
+    </div>
+
+    <div id="publications" class="page-header container">
+      <h1>Publications</h1>
+    </div>
+    <div class="container">
       <table class="publications">
         <tr>
-        <td class="venue">PG</td>
+        <td class="venue">
+          <strong>PG</strong><br/>(21%)
+        </td>
         <td>
           Jonathan Dorn, Connelly Barnes, Jason Lawrence, Westley Weimer.
           <strong>Towards Automatic Band-Limited Procedural Shaders</strong>,
@@ -126,15 +211,21 @@ Code Transformations," was approved in April 2016.
           [<a href="publications/pg2015-slides.pdf">slides</a> (17 MB)]
         </td>
         </tr><tr>
-        <td class="venue">ESEC/FSE</td>
+        <td class="venue">
+          <strong>ESEC/FSE</strong><br/>(25%)
+        </td>
         <td>
           Ermira Daka, Jose Campos, Gordon Fraser, Jonathan Dorn, Westley Weimer.
           <strong>Modeling Readability to Improve Unit Tests</strong>,
           Foundations of Software Engineering (ESEC/FSE). 2015.
           [<a href="publications/fse2015.pdf">PDF</a>]
+          <br/>
+          <strong>ACM SIGSOFT Distinguished Paper Award</strong>
         </td>
         </tr><tr>
-        <td class="venue">SSBSE</td>
+        <td class="venue">
+          <strong>SSBSE</strong>
+        </td>
         <td>
           Ermira Daka, Jose Campos, Jonathan Dorn, Gordon Fraser, Westley Weimer.
           <strong>Generating Readable Unit Tests for Guava</strong>, Symposium
@@ -142,7 +233,9 @@ Code Transformations," was approved in April 2016.
           [<a href="publications/ssbse2015.pdf">PDF</a>]
         </td>
         </tr><tr>
-        <td class="venue">ASPLOS</td>
+        <td class="venue">
+          <strong>ASPLOS</strong><br/>(23%)
+        </td>
         <td>
           Eric Schulte, Jonathan Dorn, Stephen Harding, Stephanie Forrest,
           Westley Weimer. <strong>Post-compiler Software Optimization for
@@ -151,7 +244,9 @@ Code Transformations," was approved in April 2016.
           [<a href="publications/asplos2014.pdf">PDF</a>]
         </td>
         </tr><tr>
-        <td class="venue">HotPar</td>
+        <td class="venue">
+          <strong>HotPar</strong>
+        </td>
         <td>
           Chris Gregg, Jonathan Dorn, Kim Hazelwood, Kevin Skadron.
           <strong>Fine-Grained Resource Sharing for Concurrent GPGPU
@@ -163,14 +258,18 @@ Code Transformations," was approved in April 2016.
       </table>
     </div>
 
+    <div id="teaching" class="page-header container">
+      <h2>Teaching</h2>
+    </div>
     <div class="container">
-      <h2 id="teaching">Teaching</h2>
       I taught a compilers practicum in the spring semester of 2014.
       [<a href="cs4501/">lecture slides</a>]
     </div>
 
+    <div id="academics" class="page-header container">
+      <h2>Academics</h2>
+    </div>
     <div class="container">
-      <h2 id="academics">Academics</h2>
       <h3>Masters of Computer Science</h3>
       I completed both the MCS degree and the Ph.D. qualifying exams at the
       <a href="www.virginia.edu">University of Virginia</a> in December 2012,
