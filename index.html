@@ -16,22 +16,18 @@
     <![endif]-->
 
   <style type="text/css">
-      .mail:before {
-        content: "\2709";
+      .icon:before {
         font-family: 'Glyphicons Halflings';
         float: left;
         margin-right: 2em;
       }
-      .location:before {
-        content: "\e062";
-        font-family: 'Glyphicons Halflings';
-        float: left;
-        margin-right: 2em;
-      }
-      .mail, .location {
+      .icon {
         display: block;
         margin-bottom: 1em;
       }
+      .mail:before { content: "\2709"; }
+      .location:before { content: "\e062"; }
+      .degree:before { content: "\1f393"; }
 
       .publications td {
         padding-bottom: 1ex;
@@ -63,10 +59,10 @@
             <li><a href="#home">Home</a></li>
             <li><a href="documents/cv.pdf">CV</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#research">Research</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#research">Research</a></li>
             <li><a href="#teaching">Teaching</a></li>
-            <li><a href="#academics">Academics</a></li>
+            <li><a href="#education">Education</a></li>
           </ul>
         </div><!-- navbar-top -->
       </div>
@@ -81,12 +77,11 @@
           <div class="col-md-5">
             <h2 id="contact">Contact Info</h2>
             <ul style="text-indent: -2em;">
-              <li class="mail">dorn@virginia.edu</li>
-              <li class="location">
-                Rice Hall 434<br />
-                Department of Computer Science<br />
-                85 Engineer's Way<br />
-                Charlottesville, VA  22904
+              <li class="icon mail">jdorn@grammatech.com</li>
+              <li class="icon location">
+                GrammaTech, Inc.<br />
+                531 Esty Street<br />
+                Ithaca, NY  14850
               </li>
             </ul>
           </div>
@@ -94,24 +89,102 @@
         <div class="row">
           <div class="col-md-12">
       <p class="lead">
-I am a Ph.D. candidate (graduating in August 2017) in Computer Science at the
-<a href="http://www.virginia.edu">University of Virginia</a>, advised by
-<a href="http://www.cs.virginia.edu/~weimer/">Wes Weimer</a>.
-My research is on non-functional properties and human factors in software
-engineering. I am interested in properties of both the static source code, such
-as readability and program understandability, and the dynamic run-time behavior
-of programs, including energy use and output quality. In particular, I
-investigate how humans perceive and interact with source code and apply program
-analyses, transformations, and search-based software engineering techniques to
-improve the acceptability of these properties.
-</p><p>
-I successfully defended my dissertation, titled "Optimizing Tradeoffs of
-Non-Functional Properties in Software," on July 20, 2017.
-[<a href="https://doi.org/10.18130/V3JJ62">PDF</a>]
+I am a Senior Scientist at <a href="https://www.grammatech.com">GrammaTech, Inc.</a> I research automated software engineering, software evolution, binary analysis, and binary optimization.  My research interests also include the way developers read, understand, and interact with programs.
 </p>
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="publications" class="page-header container">
+      <h1>Publications</h1>
+    </div>
+    <div class="container">
+      <table class="publications">
+        <tr>
+        <td colspan=2><h3>Conference</h3></td></tr><tr>
+        <td class="venue">
+          <strong>PG</strong><br/>(21%)
+        </td>
+        <td>
+          Jonathan Dorn, Connelly Barnes, Jason Lawrence, Westley Weimer.
+          <strong>Towards Automatic Band-Limited Procedural Shaders</strong>,
+          Pacific Graphics. 2015.
+          [<a href="publications/pg2015.pdf">PDF</a>]
+          [<a href="https://www.cs.virginia.edu/~jad5ju/publications/pg2015.mp4">video</a> (160 MB)]
+          [<a href="publications/pg2015-appendix.pdf">supplemental material</a>]
+          [<a href="publications/pg2015-slides.pdf">slides</a> (17 MB)]
+        </td>
+        </tr><tr>
+        <td class="venue">
+          <strong>ESEC/FSE</strong><br/>(25%)
+        </td>
+        <td>
+          Ermira Daka, Jose Campos, Gordon Fraser, Jonathan Dorn, Westley Weimer.
+          <strong>Modeling Readability to Improve Unit Tests</strong>,
+          Foundations of Software Engineering (ESEC/FSE). 2015.
+          [<a href="publications/fse2015.pdf">PDF</a>]
+          <br/>
+          <strong>ACM SIGSOFT Distinguished Paper Award</strong>
+        </td>
+        </tr><tr>
+        <td class="venue">
+          <strong>SSBSE</strong>
+        </td>
+        <td>
+          Ermira Daka, Jose Campos, Jonathan Dorn, Gordon Fraser, Westley Weimer.
+          <strong>Generating Readable Unit Tests for Guava</strong>, Symposium
+          on Search Based Software Engineering (SSBSE). 2015.
+          [<a href="publications/ssbse2015.pdf">PDF</a>]
+        </td>
+        </tr><tr>
+        <td class="venue">
+          <strong>ASPLOS</strong><br/>(23%)
+        </td>
+        <td>
+          Eric Schulte, Jonathan Dorn, Stephen Harding, Stephanie Forrest,
+          Westley Weimer. <strong>Post-compiler Software Optimization for
+          Reducing Energy</strong>, Architectural Support for Programming
+          Languages and Operating Systems (ASPLOS). 2014.
+          [<a href="publications/asplos2014.pdf">PDF</a>]
+        </td>
+        </tr><tr>
+
+        <td colspan=2><h3>Journal</h3></td></tr><tr>
+        <td class="venue">
+          <strong>TSE</strong>
+        </td>
+        <td>
+          Jonathan Dorn, Jeremy Lacomis, Westley Weimer, Stephanie Forrest.
+          <strong>Automatically Exploring Tradeoffs Between Software Output Fidelity and Energy Costs</strong>
+          Transactions on Software Engineering. 45(3): 219-236. 2017
+          [<a href="publications/tse2017.pdf">PDF</a>]
+        </td>
+        </tr><tr>
+
+        <td colspan=2><h3>Workshop</h3></td></tr><tr>
+        <td class="venue">
+          <strong>HotPar</strong>
+        </td>
+        <td>
+          Chris Gregg, Jonathan Dorn, Kim Hazelwood, Kevin Skadron.
+          <strong>Fine-Grained Resource Sharing for Concurrent GPGPU
+          Kernels</strong>, 4th USENIX Workshop on Hot Topics in Parallelism
+          (HotPar'12). 2012.
+          [<a href="publications/hotpar2012.pdf">PDF</a>]
+        </td>
+        </tr><tr>
+
+        <td colspan=2><h3>Book Chapter</h3></td></tr><tr>
+        <td class="venue"></td>
+        <td>
+          Jeremy Lacomis, Jonathan Dorn, Westley Weimer, Stephanie Forrest.
+          <strong>Automatically Reducing Energy Consumption of Software.</strong>
+          <em>The Energetics of Computing in Life and Machines,</em> 2019.
+          [<a href="publications/lacomis-energetics2019.pdf">PDF</a>]
+        </td>
+        </tr>
+      </table>
     </div>
 
     <div id="research" class="page-header container">
@@ -191,81 +264,6 @@ Non-Functional Properties in Software," on July 20, 2017.
       </div>
     </div>
 
-    <div id="publications" class="page-header container">
-      <h1>Publications</h1>
-    </div>
-    <div class="container">
-      <table class="publications">
-        <tr>
-        <td class="venue">
-          <strong>TSE</strong>
-        </td>
-        <td>
-          Jonathan Dorn, Jeremy Lacomis, Westley Weimer, Stephanie Forrest.
-          <strong>Automatically Exploring Tradeoffs Between Software Output Fidelity and Energy Costs</strong>
-          Transactions on Software Engineering. (<em>Under submission</em>)
-        </td>
-        </tr><tr>
-        <td class="venue">
-          <strong>PG</strong><br/>(21%)
-        </td>
-        <td>
-          Jonathan Dorn, Connelly Barnes, Jason Lawrence, Westley Weimer.
-          <strong>Towards Automatic Band-Limited Procedural Shaders</strong>,
-          Pacific Graphics. 2015.
-          [<a href="publications/pg2015.pdf">PDF</a>]
-          [<a href="https://www.cs.virginia.edu/~jad5ju/publications/pg2015.mp4">video</a> (160 MB)]
-          [<a href="publications/pg2015-appendix.pdf">supplemental material</a>]
-          [<a href="publications/pg2015-slides.pdf">slides</a> (17 MB)]
-        </td>
-        </tr><tr>
-        <td class="venue">
-          <strong>ESEC/FSE</strong><br/>(25%)
-        </td>
-        <td>
-          Ermira Daka, Jose Campos, Gordon Fraser, Jonathan Dorn, Westley Weimer.
-          <strong>Modeling Readability to Improve Unit Tests</strong>,
-          Foundations of Software Engineering (ESEC/FSE). 2015.
-          [<a href="publications/fse2015.pdf">PDF</a>]
-          <br/>
-          <strong>ACM SIGSOFT Distinguished Paper Award</strong>
-        </td>
-        </tr><tr>
-        <td class="venue">
-          <strong>SSBSE</strong>
-        </td>
-        <td>
-          Ermira Daka, Jose Campos, Jonathan Dorn, Gordon Fraser, Westley Weimer.
-          <strong>Generating Readable Unit Tests for Guava</strong>, Symposium
-          on Search Based Software Engineering (SSBSE). 2015.
-          [<a href="publications/ssbse2015.pdf">PDF</a>]
-        </td>
-        </tr><tr>
-        <td class="venue">
-          <strong>ASPLOS</strong><br/>(23%)
-        </td>
-        <td>
-          Eric Schulte, Jonathan Dorn, Stephen Harding, Stephanie Forrest,
-          Westley Weimer. <strong>Post-compiler Software Optimization for
-          Reducing Energy</strong>, Architectural Support for Programming
-          Languages and Operating Systems (ASPLOS). 2014.
-          [<a href="publications/asplos2014.pdf">PDF</a>]
-        </td>
-        </tr><tr>
-        <td class="venue">
-          <strong>HotPar</strong>
-        </td>
-        <td>
-          Chris Gregg, Jonathan Dorn, Kim Hazelwood, Kevin Skadron.
-          <strong>Fine-Grained Resource Sharing for Concurrent GPGPU
-          Kernels</strong>, 4th USENIX Workshop on Hot Topics in Parallelism
-          (HotPar'12). 2012.
-          [<a href="publications/hotpar2012.pdf">PDF</a>]
-        </td>
-        </tr>
-      </table>
-    </div>
-
     <div id="teaching" class="page-header container">
       <h2>Teaching</h2>
     </div>
@@ -288,29 +286,17 @@ Non-Functional Properties in Software," on July 20, 2017.
       </p>
     </div>
 
-    <div id="academics" class="page-header container">
-      <h2>Academics</h2>
+    <div id="education" class="page-header container">
+      <h2>Education</h2>
     </div>
     <div class="container">
-      <h3>Masters of Computer Science</h3>
-      I completed both the MCS degree and the Ph.D. qualifying exams at the
-      <a href="www.virginia.edu">University of Virginia</a> in December 2012,
-      under the advisement of Westley Weimer. My thesis was titled
-      <a href="publications/dorn-mcs-paper.pdf">A General Software Readability
-      Model</a> [<a href="publications/dorn-mcs-slides.pdf">slides</a>].
-
-      <h3>Bachelors Degrees</h3>
-      <p>
-      I received a B.S. in Computer Science from the
-      <a href="http://www.utexas.edu">University of Texas at Austin</a> in May
-      2004. My thesis was titled "The Development of a General Purpose Raytracer
-      for Acoustical and Visual Rendering of Virtual Environments," advised by
-      Bruce Naylor.
-      </p><p>
-      I also received a B.A. in
-      <a href="http://www.utexas.edu/cola/progs/plan2/">Plan II</a> from the
-      University of Texas at Austin in May 2004.
-      </p>
+      <ul style="text-indent: -2em;">
+        <li class="icon">
+          <strong>Ph.D. in Computer Science</strong>, 2017
+          [<a href="https://doi.org/10.18130/V3JJ62">Dissertation</a>]<br/>
+          University of Virginia
+        </li>
+      </ul>
     </div>
   </body>
 </html>
